@@ -1,4 +1,4 @@
-package com.blendeer;
+package com.blendeer.lab1;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

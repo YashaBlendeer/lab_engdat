@@ -1,13 +1,14 @@
-package com.blendeer;
+package com.blendeer.lab1;
 
+import com.blendeer.SparkDriver;
 import org.apache.spark.sql.Dataset;
 
-import org.apache.spark.sql.Encoder;
 import org.apache.spark.sql.Encoders;
-import org.apache.spark.sql.Row;
 import org.apache.spark.sql.types.DataTypes;
 import org.apache.spark.sql.types.StructField;
 import org.apache.spark.sql.types.StructType;
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
 
 import java.time.LocalDateTime;
 import java.util.Comparator;
@@ -74,7 +75,8 @@ public class Main {
     System.out.println(df);
   }
 
-  public static StructType minimumDataSchema() {
+  @Contract(" -> new")
+  public static @NotNull StructType minimumDataSchema() {
     return DataTypes.createStructType(new StructField[] {
             DataTypes.createStructField("Date", DataTypes.StringType, true),
             DataTypes.createStructField("Open", DataTypes.DoubleType, true),

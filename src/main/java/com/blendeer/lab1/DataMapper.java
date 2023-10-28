@@ -1,4 +1,4 @@
-package com.blendeer;
+package com.blendeer.lab1;
 
 import org.apache.spark.api.java.function.MapFunction;
 import org.apache.spark.sql.Row;
